@@ -1,0 +1,126 @@
+@import "../../responsive.scss";
+
+.contactPage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    //padding-top: 15%;
+    flex: 3;
+
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      height: 100%;
+
+      @include lg{
+        padding-right: 50px;
+      }
+
+      @include md{
+        padding: 0;
+      }
+
+      @include sm{
+        justify-content: flex-start;
+      }
+
+      .title {
+        font-size: 50px;
+
+        @include lg {
+          font-size: 34px;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        flex-wrap: wrap;   
+        justify-content: space-between;
+        align-items: center;
+        
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: bold;
+          padding-top: 10%;
+          text-align: center;
+          
+        }
+
+        h3 {
+          font-size: 30px;
+          padding-top: 10%;
+          margin-bottom: 10%;
+          text-align: center;
+        }
+
+        p{
+          font-size: 1.3vw;
+        }
+
+        .pre {
+          background-color: #f4f4f4;
+          border: 1px solid #ccc;
+          padding: 15px;
+          font-family: 'Arial', sans-serif; // Override the monospace font if needed
+          white-space: pre-wrap; // Ensures it wraps text to the container
+      }
+      
+
+
+        .box {
+          margin: 0 2vw;  
+          flex: 1;   
+           
+        }
+      
+      .box img {
+          max-width: 80%;  
+          height: auto;    
+          display: block;  
+          margin: 0 auto;  
+      }
+      }
+
+      
+    }
+  }
+
+  .imgContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include md {
+      display: none;
+    }
+
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+
+      @include lg {
+        width: 105%;
+      }
+    }
+  }
+
+}
